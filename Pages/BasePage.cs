@@ -10,6 +10,11 @@ namespace Wikipedia.Automation.Pages
 
         private static int DefaultTimeoutInSeconds = 10;
 
+        public BasePage(IWebDriver driver)
+        {
+            Driver = driver;
+        }
+
         public string GetCurrentUrl()
         {
             return Driver.Url;

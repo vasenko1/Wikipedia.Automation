@@ -21,12 +21,13 @@ namespace Wikipedia.Automation.Pages
         [FindsBy(How = How.Id, Using = "js-lang-list-button")]
         private IWebElement _selectLanguageMenuButton;
 
-        public HomeDashboardPage(IWebDriver driver) : base(driver)
+        public string mainPageURL = "https://www.wikipedia.org/";
+
+        public MainPage(IWebDriver driver) : base(driver)
         {
         }
 
 
-        
         public void CheckUserIsOnMainPage()
         {
             Assert.IsTrue(_selectLanguageMenuButton.Displayed, "Error, User is not at Login Page!");
